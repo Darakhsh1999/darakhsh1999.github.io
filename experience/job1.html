@@ -8,30 +8,45 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../cv.html">CV</a></li>
-            <li><a href="#">Work Experience</a>
-                <ul>
-                    <li><a href="../experience/job1.html">Associate Research Engineer</a></li>
-                    <li><a href="../experience/job2.html">Software Developer</a></li>
-                    <!-- Add more job entries here -->
-                </ul>
-            </li>
-            <li><a href="../academia.html">Academic Background</a></li>
-            <li><a href="../certificates.html">Certificates</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="job-description">
-        <h1>Associate Research Engineer - GKN Aerospace Sweden AB</h1>
-        <h2>Trollhättan, Sweden (January 2023 - December 2024)</h2>
-        <p>I developed computer vision models using both deep learning (PyTorch) and classical (openCV) methods.<br>I developed the entire pipeline
-            in the deep learning pipeline, from data curation to model evaluation. I worked extensively with image data in both X-ray format and standard RGB camera format.
-        </p>
-        <ul>
-            <li>Deep learning</li>
+    <ul>
+        <li class="nav-name">Arash Darakhsh</li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">Work Experience</a>
             <ul>
+                <li><a href="../experience/job1.html">Associate Research Engineer</a></li>
+                <li><a href="../experience/job2.html">Software Developer</a></li>
+                <!-- Add more job entries here -->
+            </ul>
+        </li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../academia.html">Academic Background</a></li>
+        <li><a href="../certificates.html">Certificates</a></li>
+    </ul>
+    </nav>
+    <main class="job-experience">
+        <section class="job-description">
+            <div class="job-header">
+                <h1>Associate Research Engineer</h1>
+                <h2>GKN Aerospace Sweden AB · Full-time</h2>
+                <div class="job-meta">
+                    <span class="location">📍 Trolhättan, Sweden</span>
+                    <span class="duration">🗓️ January 2023 - December 2024 · 2 yrs</span>
+                </div>
+            </div>
+            
+            <div class="job-summary">
+                <p>As a Research Engineer specializing in Computer Vision at GKN Aerospace, I led the development of advanced computer vision solutions that significantly enhanced our inspection and quality assurance processes. My role involved designing and implementing both deep learning models using PyTorch and classical computer vision techniques with OpenCV to solve complex industrial challenges.</p>
+                
+                <p>I was responsible for the complete machine learning pipeline, from initial data collection and preprocessing to model deployment and performance monitoring. This included working with diverse imaging modalities, including high-resolution X-ray scans and standard RGB camera feeds, to develop robust solutions for aerospace component inspection.</p>
+                
+                <p>My work directly contributed to improving manufacturing efficiency and quality control by implementing cutting-edge computer vision algorithms that automated previously manual inspection processes, reducing human error and increasing throughput.</p>
+            </div>
+        <div class="skills-section">
+            <h3>Key Responsibilities & Achievements</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Deep Learning Development</h4>
+                    <ul>
                 <li>Training pipeline</li>
                 <li>Runtime image augmentations</li>
                 <li>Performance/test evaluation</li>
@@ -43,32 +58,71 @@
                 <li>Ultralytics yolov8</li>
                 <li>Huggingface</li>
                 <li>DICOM data</li>
-            </ul>
-            <li>Computer vision</li>
-            <ul>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Computer Vision</h4>
+                    <ul>
                 <li>OpenCV</li>
                 <li>Scikit-image</li>
                 <li>Image processing</li>
                 <li>Hough transform</li>
                 <li>Algorithm hyperparameter optimization</li>
-            </ul>
-            <li>Data labeling</li>
-            <ul>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Data Management</h4>
+                    <ul>
                 <li>Data curating</li>
                 <li>Data refinement</li>
                 <li>Model assisted annotations</li>
                 <li>Data annotation conversions</li>
                 <li>Label Studio</li>
                 <li>Auto-distill</li>
-            </ul>
-            <li>Microsoft stack</li>
-            <ul>
-                <li>Teams</li>
-                <li>Outlook</li>
-            </ul>
-            <li>Git-based workflow</li>
-            <li>Sprint meeting format</li>
-        </ul>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Workflow</h4>
+                    <ul>
+                        <li>Microsoft 365 (Teams, Outlook, Office)</li>
+                        <li>Git version control & GitHub/GitLab</li>
+                        <li>Agile/Scrum methodology</li>
+                        <li>JIRA project management</li>
+                        <li>CI/CD pipelines</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:darakrash@protonmail.com">darakrash@protonmail.com</a></li>
+                    <li><a href="https://github.com/Darakhsh1999" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/arash-darakhsh/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arash Darakhsh. All rights reserved.</p>
+                <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

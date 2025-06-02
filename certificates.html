@@ -8,25 +8,130 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="#">Work Experience</a>
-                <ul>
-                    <li><a href="experience/job1.html">Associate Research Engineer</a></li>
-                    <li><a href="experience/job2.html">Software Developer</a></li>
-                    <!-- Add more job entries here -->
-                </ul>
-            </li>
-            <li><a href="academia.html">Academic Background</a></li>
-            <li><a href="certificates.html">Certificates</a></li>
-        </ul>
+    <ul>
+        <li class="nav-name">Arash Darakhsh</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Work Experience</a>
+            <ul>
+                <li><a href="experience/job1.html">Associate Research Engineer</a></li>
+                <li><a href="experience/job2.html">Software Developer</a></li>
+                <!-- Add more job entries here -->
+            </ul>
+        </li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="academia.html">Academic Background</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+    </ul>
     </nav>
-    <main>
-        <h1>Certificates</h1>
-        <h2>HuggingFace AI Agent certificate</h2>
-        <p> HuggingFace's AI Agent course certificate. Theory and code implementation of AI Agents using frameworks such as smolagents, Llama-Index & LangGraph.</p>
-        <img src="files/hf_agent_certificate.webp" width="50%"/>
+    <main class="certificates-container">
+        <h1 class="section-title">Certificates & Achievements</h1>
+
+        <!-- DeepLearning.ai MCP -->
+        <div class="certificate">
+            <a href="https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic/lesson/fkbhh/introduction" target="_blank">
+                <h2 class="certificate-title">DeepLearning.ai MCP Course Certificate</h2>
+            </a>
+            <div class="certificate-content">
+                <div class="certificate-image-container">
+                    <a href="https://learn.deeplearning.ai/accomplishments/cac332de-020b-4b06-a3eb-b6fe84027e1d?usp=sharing" target="_blank">
+                        <img src="files/deeplearningai-mcp-certificate.png" alt="DeepLearning.ai MCP Certificate" class="certificate-image"/>
+                    </a>
+                </div>
+                <div class="certificate-details">
+                    <p class="certificate-summary">Successfully completed the DeepLearning.ai Model Context Protocol (MCP) course, gaining comprehensive knowledge of MCP's theoretical foundations and practical implementations. The course provided hands-on experience with both high-level concepts and low-level protocol details, enabling the creation of powerful AI applications through standardized context management.</p>
+                    <h3>Key Learnings:</h3>
+                    <ul class="key-points">
+                        <li><strong>Protocol Fundamentals:</strong> Mastered MCP architecture including host, client, and server components and their interactions</li>
+                        <li><strong>Tool Development:</strong> Created custom MCP tools and resources for enhanced AI capabilities</li>
+                        <li><strong>Implementation:</strong> Gained experience with both local (stdio) and remote (HTTP/SSE) transport protocols</li>
+                        <li><strong>Integration:</strong> Extended Claude Desktop's functionality by integrating community MCP servers</li>
+                        <li><strong>Practical Application:</strong> Applied MCP concepts to enhance LLM capabilities through structured context management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- HuggingFace MCP course -->
+        <div class="certificate">
+            <a href="https://huggingface.co/learn/mcp-course/unit0/introduction" target="_blank">
+                <h2 class="certificate-title">🤗 HuggingFace MCP Course Certificate</h2>
+            </a>
+            <div class="certificate-content">
+                <div class="certificate-image-container">
+                    <a href="https://cdn-uploads.huggingface.co/production/uploads/noauth/rwAvIkOKkzV0Lsuc5jWN9.webp" target="_blank">
+                        <img src="files/mcp-certificate.webp" alt="HuggingFace MCP Course Certificate" class="certificate-image"/>
+                    </a>
+                </div>
+                <div class="certificate-details">
+                <p class="certificate-summary">Successfully completed the HuggingFace Model Context Protocol (MCP) course, mastering the standardized approach to integrating external data and tools with large language models. This comprehensive program provided hands-on experience with MCP SDKs and frameworks, enabling the creation of powerful, context-aware AI applications.</p>
+                <h3>Key Learnings:</h3>
+                <ul class="key-points">
+                    <li><strong>MCP Fundamentals:</strong> Gained deep understanding of the Model Context Protocol standard and its role in AI application development</li>
+                    <li><strong>Technical Implementation:</strong> Mastered MCP SDKs and frameworks for building context-aware AI applications</li>
+                    <li><strong>Practical Applications:</strong> Developed real-world solutions using MCP to integrate external data sources and tools with LLMs</li>
+                    <li><strong>Community Collaboration:</strong> Engaged with the MCP community, sharing projects and learning from industry implementations</li>
+                    <li><strong>Best Practices:</strong> Learned to design scalable and maintainable AI applications using MCP standards</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- HuggingFace AI Agent Course -->
+        <div class="certificate">
+            <a href="https://huggingface.co/learn/agents-course/unit0/introduction" target="_blank">
+                <h2 class="certificate-title">🤗 HuggingFace AI Agent Course Certificate</h2>
+            </a>
+            <div class="certificate-content">
+                <div class="certificate-image-container">
+                    <a href="https://cdn-uploads.huggingface.co/production/uploads/noauth/D9Ltc3sx8WIOpb8es33bB.webp" target="_blank">
+                        <img src="files/hf_agent_certificate.webp" alt="HuggingFace AI Agent Certificate" class="certificate-image"/>
+                    </a>
+                </div>
+                <div class="certificate-details">
+                <p class="certificate-summary">Successfully completed the HuggingFace AI Agents course, a comprehensive program that combines theoretical foundations with hands-on implementation of AI agents. Through this course, I gained practical experience with cutting-edge agent frameworks and contributed to the open-source AI community by sharing my work on the Hugging Face Hub.</p>
+                <h3>Key Learnings:</h3>
+                <ul class="key-points">
+                    <li><strong>Core Frameworks:</strong> Mastered smolagents, LlamaIndex, and LangGraph for building sophisticated AI agents</li>
+                    <li><strong>Agent Architecture:</strong> Designed and implemented autonomous agents with capabilities for complex decision-making</li>
+                    <li><strong>Practical Implementation:</strong> Developed and deployed agents in real-world scenarios</li>
+                    <li><strong>Community & Collaboration:</strong> Participated in challenges and engaged with the AI community</li>
+                    <li><strong>Model Fine-tuning:</strong> Specialized in fine-tuning LLMs for function-calling and optimizing agent performance</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:darakrash@protonmail.com">darakrash@protonmail.com</a></li>
+                    <li><a href="https://github.com/Darakhsh1999" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/arash-darakhsh/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arash Darakhsh. All rights reserved.</p>
+                <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

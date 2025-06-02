@@ -5,34 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="#">Work Experience</a>
-                <ul>
-                    <li><a href="experience/job1.html">Associate Research Engineer</a></li>
-                    <li><a href="experience/job2.html">Software Developer</a></li>
-                    <!-- Add more job entries here -->
-                </ul>
-            </li>
-            <li><a href="academia.html">Academic Background</a></li>
-            <li><a href="certificates.html">Certificates</a></li>
-        </ul>
+    <ul>
+        <li class="nav-name">Arash Darakhsh</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Work Experience</a>
+            <ul>
+                <li><a href="experience/job1.html">Associate Research Engineer</a></li>
+                <li><a href="experience/job2.html">Software Developer</a></li>
+                <!-- Add more job entries here -->
+            </ul>
+        </li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="academia.html">Academic Background</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+    </ul>
     </nav>
     <main>
-        <h1>Arash Darakhsh</h1>
-        <h2>Machine Learning Engineer / Data Scientist / Full Stack Software Developer</h2>
-        <p>Hello!</p>
-        <p>My name is Arash and welcome to my personal webpage. This is a minimalistic website in pure HTML to showcase my academic background and work experience.</p>
-        <p>I have a background in theoretical physics and programming (Python/C++) with a big interest in machine learning and automotive engineering. <br> 
-            My biggest strengths are computer vision (CV) and natural language processing (NLP).
-        <hr>
-        <h2>Contact Information</h2>
-        <p>Email: darakrash@protonmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/arash-darakhsh/">Arash-Darakhsh</a></p>
+        <div class="hero">
+            <div class="profile-image-container" id="coin">
+                <div class="coin-inner">
+                    <div class="coin-front">
+                        <img src="files/profile_picture.jpg" alt="Arash Darakhsh" class="profile-image">
+                    </div>
+                    <div class="coin-back">
+                        <img src="files/profile_picture_ghibli.png" alt="Arash Darakhsh Ghibli" class="profile-image">
+                    </div>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h1><i>Arash Darakhsh</i></h1>
+                <h2>AI Engineer / Data Scientist</h2>
+                <p>Welcome! My name is Arash and welcome to my personal webpage. I have a background in theoretical physics and programming from <a href="https://www.chalmers.se/en/" target="_blank" rel="noopener noreferrer"><b><i>Chalmers University of Technology</i></b></a>, specialized in machine learning and modern AI systems. I have expert level knowledge in computer vision, large language models, and applied AI systems.</p>
+                <div class="profile-links">
+                    <a href="mailto:darakrash@protonmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Darakhsh1999" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arash-darakhsh/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+            </div>
+        </div>
     </main>
+
+    <section class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <a href="experience/job1.html" class="timeline-card">
+                        <div class="timeline-date">March 2024 - December 2024</div>
+                        <h3 class="timeline-title">Associate Research Engineer</h3>
+                        <p class="timeline-company">GKN Aerospace Sweden AB</p>
+                        <p class="timeline-description">Improved deep learning model performance by optimizing training dataset size and implementing continuous re-training techniques.</p>
+                    </a>
+                </div>
+                
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <a href="experience/job2.html" class="timeline-card">
+                        <div class="timeline-date">Summer 2023</div>
+                        <h3 class="timeline-title">Software Developer</h3>
+                        <p class="timeline-company">GKN Aerospace Sweden AB</p>
+                        <p class="timeline-description">Operationalized the research from my master's thesis by developing a production-ready system for automated model retraining.</p>
+                    </a>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <a href="academia.html#master-degree" class="timeline-card">
+                        <div class="timeline-date">Autumn 2021 - Autumn 2023</div>
+                        <h3 class="timeline-title">M.Sc in Data Science & AI</h3>
+                        <p class="timeline-company">Chalmers University of Technology</p>
+                        <p class="timeline-description">Research Topics: Deep Learning, CV, NLP, ML, and AI.</p>
+                    </a>
+                </div>
+
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <a href="academia.html#bachelor-degree" class="timeline-card">
+                        <div class="timeline-date">Autumn 2018 - Autumn 2021</div>
+                        <h3 class="timeline-title">B.Sc in Engineering Physics</h3>
+                        <p class="timeline-company">Chalmers University of Technology</p>
+                        <p class="timeline-description">Research Topics: Experimental Physics, Statistics, Math.</p>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:darakrash@protonmail.com">darakrash@protonmail.com</a></li>
+                    <li><a href="https://github.com/Darakhsh1999" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/arash-darakhsh/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arash Darakhsh. All rights reserved.</p>
+                <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>

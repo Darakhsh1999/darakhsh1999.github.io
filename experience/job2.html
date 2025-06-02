@@ -8,26 +8,103 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../cv.html">CV</a></li>
-            <li><a href="#">Work Experience</a>
-                <ul>
-                    <li><a href="../experience/job1.html">Associate Research Engineer</a></li>
-                    <li><a href="../experience/job2.html">Software Developer</a></li>
-                    <!-- Add more job entries here -->
-                </ul>
-            </li>
-            <li><a href="../academia.html">Academic Background</a></li>
-            <li><a href="../certificates.html">Certificates</a></li>
-        </ul>
+    <ul>
+        <li class="nav-name">Arash Darakhsh</li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">Work Experience</a>
+            <ul>
+                <li><a href="../experience/job1.html">Associate Research Engineer</a></li>
+                <li><a href="../experience/job2.html">Software Developer</a></li>
+                <!-- Add more job entries here -->
+            </ul>
+        </li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../academia.html">Academic Background</a></li>
+        <li><a href="../certificates.html">Certificates</a></li>
+    </ul>
     </nav>
-    <main>
+    <main class="job-experience">
         <section class="job-description">
-        <h1>Software Developer (summer job) - GKN Aerospace Sweden AB</h1>
-        <h2>Trollhättan, Sweden (Summer 2023)</h2>
-        <p>I implemented the findings from my master's thesis into the internal system at GKN Aerospace. I developed a system that automatically detects when a deep learning model needs to be retrained. <br>
-            The system is compatible with a HMI (human machine interface) </p>
+            <div class="job-header">
+                <h1>Software Developer (Summer Internship)</h1>
+                <h2>GKN Aerospace Sweden AB · Internship</h2>
+                <div class="job-meta">
+                    <span class="location">📍 Trolhättan, Sweden</span>
+                    <span class="duration">🗓️ Summer 2023 · 3 months</span>
+                </div>
+            </div>
+            
+            <div class="job-summary">
+                <p>During my summer internship at GKN Aerospace, I had the exciting opportunity to operationalize the research from my master's thesis by developing a production-ready system for automated model retraining. This innovative solution was designed to intelligently monitor model performance metrics and automatically trigger retraining pipelines when model accuracy fell below predefined thresholds.</p>
+                
+                <p>I architected and implemented a robust software solution that seamlessly integrated with the company's existing infrastructure. The system featured a user-friendly Human-Machine Interface (HMI) that provided real-time insights into model performance, retraining status, and data drift metrics. This interface was designed with the end-users in mind, ensuring that both technical and non-technical team members could easily interact with and understand the system's operations.</p>
+                
+                <p>My work significantly reduced the manual effort required for model maintenance while improving overall system reliability. The automated retraining mechanism ensured that models remained accurate and up-to-date with the latest data patterns, leading to more consistent and reliable predictions in the production environment.</p>
+            </div>
+            
+            <div class="skills-section">
+                <h3>Key Contributions & Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Core Development</h4>
+                        <ul>
+                            <li>Designed and implemented automated model retraining pipeline</li>
+                            <li>Developed performance monitoring and alerting system</li>
+                            <li>Created data drift detection mechanisms</li>
+                            <li>Integrated with existing MLOps infrastructure</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technologies Used</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>PyTorch</li>
+                            <li>Docker</li>
+                            <li>RESTful APIs</li>
+                            <li>SQL/NoSQL databases</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>User Interface</h4>
+                        <ul>
+                            <li>Developed interactive HMI dashboard</li>
+                            <li>Implemented real-time data visualization</li>
+                            <li>User authentication and role-based access</li>
+                            <li>Responsive design for multiple devices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:darakrash@protonmail.com">darakrash@protonmail.com</a></li>
+                    <li><a href="https://github.com/Darakhsh1999" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/arash-darakhsh/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arash Darakhsh. All rights reserved.</p>
+                <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

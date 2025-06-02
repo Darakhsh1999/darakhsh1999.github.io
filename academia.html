@@ -5,71 +5,348 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Background</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="#">Work Experience</a>
-                <ul>
-                    <li><a href="experience/job1.html">Associate Research Engineer</a></li>
-                    <li><a href="experience/job2.html">Software Developer</a></li>
-                    <!-- Add more job entries here -->
-                </ul>
-            </li>
-            <li><a href="academia.html">Academic Background</a></li>
-            <li><a href="certificates.html">Certificates</a></li>
-        </ul>
+    <ul>
+        <li class="nav-name">Arash Darakhsh</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Work Experience</a>
+            <ul>
+                <li><a href="experience/job1.html">Associate Research Engineer</a></li>
+                <li><a href="experience/job2.html">Software Developer</a></li>
+                <!-- Add more job entries here -->
+            </ul>
+        </li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="academia.html">Academic Background</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+    </ul>
     </nav>
     <main>
-        <h1>Academic Background</h1>
-        <h2>A complete list of all academic courses I have completed in university</h2>
-        <ul>
-            <h3>Bachelor Program</h3>
-            <li>Linear algebra and geometry</li>
-            <li>Introductory mathematical analysis</li>
-            <li>Computer programming</li>
-            <li>Mechanics 1</li>
-            <li>Tools of engineering physics</li>
-            <li>Multivariable analysis</li>
-            <li>Real analysis</li>
-            <li>Linear algebra and numerical analysis</li>
-            <li>Mechanics 2</li>
-            <li>Complex mathematical analysis</li>
-            <li>Vector fields and classical physics</li>
-            <li>Electrical circuits and systems</li>
-            <li>Theory of electromagnetic fields</li>
-            <li>Fourier analysis</li>
-            <li>Optics</li>
-            <li>Mathematical statistics</li>
-            <li>Strength of materials</li>
-            <li>Environmental physics</li>
-            <li>Structural analysis using the finite element method</li>
-            <li>Quantum physics</li>
-            <li>Experimental physics 1 - measuring technique</li>
-            <li>Thermodynamics and statistical mechanics</li>
-            <li>Partial differential equations</li>
-            <li>Applied quantum physics</li>
-            <li>Solid state physics</li>
-            <li>Experimental physics 2 - basis</li>
-            <li>High frequency electromagnetic waves</li>
-            <li>Subatomic physics</li>
-            <h3>Master Program</h3>
-            <li>Artificial neural networks</li>
-            <li>Stochastic optimization algorithms</li>
-            <li>Data structures and algorithms</li>
-            <li>Simulation of complex systems</li>
-            <li>Algorithms for machine learning and inference</li>
-            <li>Computational biology</li>
-            <li>Dynamical systems</li>
-            <li>Statistical learning for big data</li>
-            <li>Advanced machine learning with neural networks</li>
-            <li>High performance computing</li>
-            <li>Image processing</li>
-            <li>Technology and society</li>
-            <li>Machine learning for natural language processing</li>
-        </ul>
+        <!-- Academic Background title section -->
+        <div class="container">
+            <h1>Academic Background</h1>
+            <h2>A complete list of all academic courses I have completed in university</h2>
+            <p>My academic journey started at Chalmers University of Technology, where I pursued a Bachelor's degree in Engineering Physics studying topics such as mathematics, physics, statistics, and experimental physics. After completing my Bachelor's, I pursued a Master's program in Data Science & AI at the same institution focusing on machine learning and deep learning.</p>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- Master Program -->
+        <div class="degree-section">
+            <h1 id="master-degree">Master Program in Data Science & AI - Chalmers University of Technology (2021-2023)</h1>
+            <p>Advanced studies in machine learning, artificial intelligence, and data science with applications in various domains.</p>
+
+            <!-- Master Thesis -->
+            <div class="thesis">
+                <a href="https://odr.chalmers.se/items/54df6724-ba8d-41c7-8562-0610335ff278" target="_blank">
+                    <h3>Master Thesis - Chalmers University of Technology</h3>
+                </a>
+                <p>The topic of my Master Thesis was on researching estimation methods for the model performance of deep learning models in relation to the size of its training dataset. Additionally, I studied different methods of continuous re-training techniques to improve deployed deep learning models.</p>
+            </div>
+            
+            <ul class="course-list">
+                <li class="course-item">
+                    <details>
+                        <summary>Artificial Neural Networks</summary>
+                        <div class="description">Fundamentals of neural networks, backpropagation, and deep learning architectures.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Stochastic Optimization Algorithms</summary>
+                        <div class="description">Optimization methods for machine learning, including stochastic gradient descent and its variants.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Data Structures and Algorithms</summary>
+                        <div class="description">Advanced data structures and algorithm design and analysis for efficient computation.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Simulation of Complex Systems</summary>
+                        <div class="description">Computational methods for modeling and simulating complex systems across various domains.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Algorithms for Machine Learning and Inference</summary>
+                        <div class="description">Algorithmic foundations of machine learning, including probabilistic graphical models and inference methods.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Computational Biology</summary>
+                        <div class="description">Computational methods for analyzing biological data and modeling biological systems.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Dynamical Systems</summary>
+                        <div class="description">Analysis and modeling of dynamical systems with applications in science and engineering.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Statistical Learning for Big Data</summary>
+                        <div class="description">Statistical methods and computational techniques for analyzing large-scale datasets.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Advanced Machine Learning with Neural Networks</summary>
+                        <div class="description">Advanced topics in deep learning, including modern architectures and training techniques.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>High Performance Computing</summary>
+                        <div class="description">Parallel computing, GPU programming, and optimization for scientific computing.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Image Processing</summary>
+                        <div class="description">Digital image processing techniques and computer vision algorithms.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Technology and Society</summary>
+                        <div class="description">Ethical, social, and economic implications of technology and AI.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Machine Learning for Natural Language Processing</summary>
+                        <div class="description">Application of machine learning techniques to natural language understanding and generation.</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <hr style="margin: 3rem 0;">
+
+        <!-- Bachelor Program -->
+        <div class="degree-section">
+            <h1 id="bachelor-degree">Bachelor Program - Chalmers University of Technology (2018-2021)</h1>
+            <p>Engineering Physics with focus on theoretical and applied physics, mathematics, and computational methods.</p>
+
+            <!-- Bachelor Thesis -->
+            <div class="thesis">
+                <a href="https://odr.chalmers.se/items/7555b55d-2164-4070-b67b-52a8658f2439" target="_blank">
+                    <h3>Bachelor Thesis - Chalmers University of Technology</h3>
+                </a>
+                <p>The topic of my Bachelor Thesis was on object detection using convolutional deep learning model architectures using YoloV3. The dataset we used was synthetically generated using a Python library to simulate Mie Scattering.</p>
+            </div>
+            
+            <ul class="course-list">
+                <li class="course-item">
+                    <details>
+                        <summary>Linear Algebra and Geometry</summary>
+                        <div class="description">Fundamentals of vector spaces, linear transformations, eigenvalues, and geometric applications.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Introductory Mathematical Analysis</summary>
+                        <div class="description">Limits, continuity, differentiation, and integration of functions of a single variable.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Computer Programming</summary>
+                        <div class="description">Introduction to programming concepts using Python, focusing on problem-solving and algorithm development.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Mechanics 1</summary>
+                        <div class="description">Classical mechanics including Newton's laws, work and energy, momentum, and rotational motion.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Tools of Engineering Physics</summary>
+                        <div class="description">Essential tools and techniques used in engineering physics, including numerical methods and data analysis.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Multivariable Analysis</summary>
+                        <div class="description">Calculus of multiple variables, partial derivatives, multiple integrals, and vector calculus.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Real Analysis</summary>
+                        <div class="description">Rigorous treatment of real numbers, sequences, series, and continuity.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Linear Algebra and Numerical Analysis</summary>
+                        <div class="description">Numerical methods for solving linear systems, eigenvalue problems, and matrix factorizations.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Mechanics 2</summary>
+                        <div class="description">Advanced topics in classical mechanics including Lagrangian and Hamiltonian formulations.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Complex Mathematical Analysis</summary>
+                        <div class="description">Theory of functions of a complex variable, complex integration, and residue calculus.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Vector Fields and Classical Physics</summary>
+                        <div class="description">Application of vector calculus to classical physics problems, including fluid dynamics and electromagnetism.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Electrical Circuits and Systems</summary>
+                        <div class="description">Analysis of electrical circuits, network theorems, and system responses.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Theory of Electromagnetic Fields</summary>
+                        <div class="description">Maxwell's equations, electromagnetic waves, and their applications.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Fourier Analysis</summary>
+                        <div class="description">Fourier series, Fourier transforms, and their applications in physics and engineering.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Optics</summary>
+                        <div class="description">Geometrical and physical optics, interference, diffraction, and polarization.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Mathematical Statistics</summary>
+                        <div class="description">Probability theory, random variables, statistical inference, and hypothesis testing.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Strength of Materials</summary>
+                        <div class="description">Analysis of stress and strain in solid materials under various loading conditions.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Environmental Physics</summary>
+                        <div class="description">Physical principles underlying environmental systems and climate science.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Structural Analysis using the Finite Element Method</summary>
+                        <div class="description">Numerical methods for structural analysis using finite element techniques.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Quantum Physics</summary>
+                        <div class="description">Introduction to quantum mechanics, wave functions, and quantum states.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Experimental Physics 1 - Measuring Technique</summary>
+                        <div class="description">Laboratory techniques and measurement methods in experimental physics.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Thermodynamics and Statistical Mechanics</summary>
+                        <div class="description">Laws of thermodynamics, kinetic theory, and statistical mechanics.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Partial Differential Equations</summary>
+                        <div class="description">Analytical and numerical methods for solving partial differential equations.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Applied Quantum Physics</summary>
+                        <div class="description">Applications of quantum mechanics in modern physics and technology.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Solid State Physics</summary>
+                        <div class="description">Crystal structures, electronic properties, and phenomena in solids.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Experimental Physics 2 - Basis</summary>
+                        <div class="description">Advanced experimental techniques and data analysis in physics.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>High Frequency Electromagnetic Waves</summary>
+                        <div class="description">Propagation and applications of high-frequency electromagnetic waves.</div>
+                    </details>
+                </li>
+                <li class="course-item">
+                    <details>
+                        <summary>Subatomic Physics</summary>
+                        <div class="description">Physics of elementary particles and fundamental interactions.</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:darakrash@protonmail.com">darakrash@protonmail.com</a></li>
+                    <li><a href="https://github.com/Darakhsh1999" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/arash-darakhsh/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Arash Darakhsh. All rights reserved.</p>
+                <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
