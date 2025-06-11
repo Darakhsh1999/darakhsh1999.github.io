@@ -118,6 +118,19 @@ nav > ul > li:not(.nav-name):hover::before {
 
 /* Hover effects handled by background-color transition */
 
+/* Pulsing animation for profile image */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
 /* Hero Container */
 .hero-container {
     display: flex;
@@ -284,10 +297,55 @@ a:hover {
 }
 
 .profile-image-container {
+    position: relative;
     width: 250px;
     height: 250px;
     margin: 0 auto 2rem;
     perspective: 1000px;
+    border-radius: 50%;
+    animation: pulse 4s infinite;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 20px;
+    left: -140px;
+    background: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 18px;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 10;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    right: -16px;
+    left: auto;
+    top: 18px;
+    border-width: 6px 0 6px 16px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+
+.show-bubble {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-image-container:hover {
+    animation: pulse 2s infinite;
+    transform: scale(1.05);
 }
 
 .coin-inner {

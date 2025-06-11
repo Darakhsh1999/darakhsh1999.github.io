@@ -1,5 +1,13 @@
 // Smooth scrolling for back to top and coin flip animation
 document.addEventListener('DOMContentLoaded', function() {
+    // Show speech bubble hint after a short delay
+    const clickHint = document.getElementById('clickHint');
+    if (clickHint && !sessionStorage.getItem('profileClicked')) {
+        setTimeout(() => {
+            clickHint.classList.add('show-bubble');
+        }, 1000);
+    }
+
     // Back to top button
     const backToTopButton = document.querySelector('.back-to-top');
     if (backToTopButton) {
@@ -20,6 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Set initial state
         coinInner.style.transform = 'rotateY(0deg)';
+        
+        // Hide speech bubble on first click and remember it
+        coin.addEventListener('click', function() {
+            if (clickHint && !sessionStorage.getItem('profileClicked')) {
+                clickHint.classList.remove('show-bubble');
+                sessionStorage.setItem('profileClicked', 'true');
+            }
+        }, { once: true });
         
         coin.addEventListener('click', function() {
             // Get current rotation from the element's style
