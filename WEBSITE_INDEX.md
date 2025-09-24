@@ -22,7 +22,7 @@
 - **Main Section**: Lists all work experiences
 - **Subsections**:
   - Associate Research Engineer (`experience/job1.html`)
-  - Software Developer (`experience/job2.html`)
+  - ML Engineer (`experience/job2.html`)
 
 ### 4. Academic Background (`academia.html`)
 - **Content**: Educational background and academic achievements
