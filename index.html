@@ -43,6 +43,19 @@
                     </div>
                 </div>
                 <div class="speech-bubble" id="clickHint">Click me!</div>
+                <div class="speech-bubble" id="askHint" aria-hidden="true">Ask me anything</div>
+                <!-- Chatbox under profile image -->
+                <div id="profile-chatbox" class="chatbox collapsed" role="region" aria-label="Chat with site assistant">
+                    <div class="chatbox-header">
+                        <span class="chatbox-title">AI-rash</span>
+                        <button type="button" class="chatbox-minimize" title="Minimize" aria-label="Minimize chat" hidden>−</button>
+                    </div>
+                    <div class="chatbox-messages" aria-live="polite" aria-atomic="false"></div>
+                    <form class="chatbox-input" autocomplete="off">
+                        <input type="text" name="prompt" placeholder="Ask me anything" aria-label="Your message" required />
+                        <button type="submit" class="chatbox-send" title="Send" aria-label="Send">➤</button>
+                    </form>
+                </div>
             </div>
             <div class="profile-info">
                 <h1><i>Arash Darakhsh</i></h1>
@@ -153,5 +166,6 @@
     </footer>
     
     <script src="js/main.js"></script>
+    <script src="js/chatbox.js"></script>
 </body>
 </html>

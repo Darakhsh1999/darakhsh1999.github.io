@@ -29,15 +29,29 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set initial state
         coinInner.style.transform = 'rotateY(0deg)';
         
-        // Hide speech bubble on first click and remember it
-        coin.addEventListener('click', function() {
+        // Hide initial hint on first click, then show "Ask me anything" bubble briefly
+        coinInner.addEventListener('click', function(e) {
+            e.stopPropagation();
             if (clickHint && !sessionStorage.getItem('profileClicked')) {
                 clickHint.classList.remove('show-bubble');
                 sessionStorage.setItem('profileClicked', 'true');
+                const askHint = document.getElementById('askHint');
+                if (askHint) {
+                    // Delay showing by 2 seconds
+                    setTimeout(() => {
+                        askHint.setAttribute('aria-hidden', 'false');
+                        askHint.classList.add('show-bubble');
+                        setTimeout(() => {
+                            askHint.classList.remove('show-bubble');
+                            askHint.setAttribute('aria-hidden', 'true');
+                        }, 2500);
+                    }, 2000);
+                }
             }
         }, { once: true });
         
-        coin.addEventListener('click', function() {
+        coinInner.addEventListener('click', function(e) {
+            e.stopPropagation();
             // Get current rotation from the element's style
             const currentTransform = window.getComputedStyle(coinInner).transform;
             let currentRotation = 0;

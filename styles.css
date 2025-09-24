@@ -293,6 +293,8 @@ a:hover {
     padding: 2rem;
     gap: 4rem;
     align-items: center;
+    position: relative; /* create stacking context above next section */
+    z-index: 2;
 }
 
 .profile-image-container {
@@ -304,7 +306,6 @@ a:hover {
     border-radius: 50%;
     animation: pulse 4s infinite;
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .speech-bubble {
@@ -340,6 +341,20 @@ a:hover {
 .show-bubble {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Ask hint bubble positioning (appears after profile click) */
+#askHint {
+    top: auto;
+    bottom: -18px;
+    left: -10px;
+}
+#askHint::after {
+    right: auto;
+    left: 22px;
+    top: -10px;
+    border-width: 0 6px 12px 6px;
+    border-color: transparent transparent #333 transparent;
 }
 
 .profile-image-container:hover {
@@ -385,6 +400,7 @@ a:hover {
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    cursor: pointer; /* Limit click cursor to the image */
 }
 
 .profile-info {
@@ -407,6 +423,129 @@ a:hover {
     line-height: 1.7;
     color: #444;
     margin: 0;
+}
+
+/* Chatbox styles (Claude-inspired warm palette) */
+.chatbox {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    background: #fff7ed; /* warm beige */
+    border: 1px solid #fed7aa; /* light orange border */
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    overflow: hidden;
+    position: relative;
+    z-index: 10; /* render above following sections */
+    font-size: 0.75rem; /* slightly smaller overall text size (~2pt less than default) */
+}
+
+/* Smooth collapse/expand: animate header and messages */
+.chatbox .chatbox-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: #ffedd5; /* lighter */
+    border-bottom: 1px solid #fed7aa;
+    max-height: 48px;
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+.chatbox.collapsed .chatbox-header {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.chatbox .chatbox-title {
+    font-weight: 600;
+    color: #7c2d12; /* deep warm */
+}
+
+.chatbox .chatbox-minimize {
+    background: #fb923c; /* orange */
+    color: #fff;
+    border: 1px solid #f59e0b; /* slightly darker border */
+    font-size: 14px;
+    line-height: 1;
+    padding: 4px 10px;
+    border-radius: 8px; /* rounded rectangle chip */
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+.chatbox .chatbox-minimize:hover {
+    background: #f97316; /* darker on hover */
+}
+
+.chatbox .chatbox-messages {
+    max-height: 260px;
+    overflow-y: auto;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fffaf3;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.2s ease;
+}
+.chatbox.collapsed .chatbox-messages {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.chat-msg {
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 0.85rem; /* reduced */
+    line-height: 1.4;
+}
+.chat-msg.user {
+    background: #fde68a; /* warm yellow */
+    align-self: flex-end;
+}
+.chat-msg.assistant {
+    background: #ffedd5; /* pale peach */
+    border: 1px solid #fed7aa;
+    align-self: flex-start;
+}
+
+.chatbox .chatbox-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+.chatbox .chatbox-input input[type="text"] {
+    flex: 1;
+    min-width: 0; /* allow flexbox to shrink input so the send button is fully visible */
+    padding: 8px 10px; /* slightly tighter */
+    border: 1px solid #fecba1;
+    border-radius: 8px;
+    font-size: 0.85rem; /* reduced */
+    outline: none;
+    background: #fff;
+}
+.chatbox .chatbox-input input[type="text"]:focus {
+    border-color: #fb923c;
+    box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.15);
+}
+.chatbox .chatbox-input .chatbox-send {
+    background: #fb923c; /* orange */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.chatbox .chatbox-input .chatbox-send:hover {
+    background: #f97316;
 }
 
 @media (max-width: 900px) {
