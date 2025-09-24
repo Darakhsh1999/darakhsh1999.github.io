@@ -12,6 +12,7 @@ nav {
     background-color: #333; /* Adjust to match your design */
     padding: 1em;
     position: relative;
+    z-index: 2000; /* ensure navigation sits above page content */
 }
 
 nav ul {
@@ -71,6 +72,7 @@ nav ul li ul {
     visibility: hidden;
     transition: all 0.3s ease-out 0.1s; /* Added delay */
     border-radius: 0 0 4px 4px;
+    z-index: 2100; /* dropdown above everything */
 }
 
 /* Dropdown menu items */
