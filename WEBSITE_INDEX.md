@@ -21,7 +21,7 @@
 ### 3. Work Experience
 - **Main Section**: Lists all work experiences
 - **Subsections**:
-  - Associate Research Engineer (`experience/job1.html`)
+  - ML Engineer (`experience/job1.html`)
   - ML Engineer (`experience/job2.html`)
 
 ### 4. Academic Background (`academia.html`)

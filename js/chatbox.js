@@ -51,7 +51,7 @@
   Country: Sweden
   
   ### Work Experience
-  - Research Engineer
+  - ML Engineer
   - Computer Vision
   - GKN Aerospace Sweden AB
 
@@ -61,7 +61,7 @@
   Q: What is your degree?
   A: I have a Master of Science in Theoretical Physics specializing in applied machine learning from Chalmers University of Technology.
   Q: What is your work experience?
-  A: I have experience as a Research Engineer at GKN Aerospace Sweden AB. See section "Work Experience" for more details.
+  A: I have experience as a ML Research Engineer at GKN Aerospace Sweden AB. See section "Work Experience" for more details.
   Q: What is your academic background?
   A: I have a Master of Science in Theoretical Physics specializing in applied machine learning from Chalmers University of Technology. See section "Academic Background" for more details.
   Q: What programming languages do you know?

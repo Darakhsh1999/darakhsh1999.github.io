@@ -79,6 +79,42 @@
             transform: translateY(-1px);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .cv-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            padding: 1.25rem;
+            background: #f8f9fa;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .cv-btn {
+            appearance: none;
+            border: 1px solid #2c3e50;
+            background: white;
+            color: #2c3e50;
+            padding: 0.65rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .cv-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        .cv-btn.active {
+            background: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+        }
         
         @media (max-width: 768px) {
             .resume-container {
@@ -94,8 +130,9 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Work Experience</a>
                 <ul>
-                    <li><a href="experience/job1.html">Associate Research Engineer</a></li>
-                    <li><a href="experience/job2.html">ML Engineer</a></li>
+                    <li><a href="experience/job3.html">Electronic Technician</a></li>
+                    <li><a href="experience/job1.html">ML Engineer</a></li>
+                    <li><a href="experience/job2.html">Internship</a></li>
                 </ul>
             </li>
             <li><a href="resume.html">Resume</a></li>
@@ -105,16 +142,24 @@
     </nav>
     
     <main class="resume-container">
-        <div class="download-container">
-            <a href="files/ArashCV-AI.pdf" class="download-btn" download>
+        <div class="pdf-container">
+            <div class="cv-toggle" role="tablist" aria-label="Select resume">
+                <button class="cv-btn" type="button" data-cv="ai-engineer" role="tab" aria-selected="false">AI Engineer</button>
+                <button class="cv-btn" type="button" data-cv="data-scientist" role="tab" aria-selected="false">Data Scientist</button>
+                <button class="cv-btn" type="button" data-cv="deep-learning-engineer" role="tab" aria-selected="false">Deep Learning Engineer</button>
+                <button class="cv-btn" type="button" data-cv="data-engineer" role="tab" aria-selected="false">Data Engineer</button>
+                <button class="cv-btn" type="button" data-cv="data-analyst" role="tab" aria-selected="false">Data Analyst</button>
+                <button class="cv-btn" type="button" data-cv="software-engineer" role="tab" aria-selected="false">Software Engineer</button>
+            </div>
+            <div class="download-container">
+                <a id="resume-download" href="files/ArashCV-AI.pdf" class="download-btn" download>
                 <span>Download Resume</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
                     <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
                 </svg>
-            </a>
-        </div>
-        <div class="pdf-container">
+                </a>
+            </div>
             <iframe id="pdf-iframe" src="files/ArashCV-AI.pdf#toolbar=1&navpanes=0&statusbar=0&view=FitH&zoom=page-width"></iframe>
         </div>
     </main>
@@ -137,6 +182,84 @@
     </footer>
     
     <script>
+        (function() {
+            const cvFiles = {
+                'ai-engineer': 'files/ArashCV-AI.pdf',
+                'data-scientist': 'files/ArashCV-DS.pdf',
+                'data-analyst': 'files/ArashCV-DA.pdf',
+                'deep-learning-engineer': 'files/ArashCV-DL.pdf',
+                'data-engineer': 'files/ArashCV-DE.pdf',
+                'software-engineer': 'files/ArashCV-SWE.pdf'
+            };
+
+            const cvLabels = {
+                'ai-engineer': 'AI Engineer',
+                'data-scientist': 'Data Scientist',
+                'data-analyst': 'Data Analyst',
+                'deep-learning-engineer': 'Deep Learning Engineer',
+                'data-engineer': 'Data Engineer',
+                'software-engineer': 'Software Engineer'
+            };
+
+            const buttons = Array.from(document.querySelectorAll('.cv-btn'));
+            const iframe = document.getElementById('pdf-iframe');
+            const downloadLink = document.getElementById('resume-download');
+
+            const pdfViewerParams = '#toolbar=1&navpanes=0&statusbar=0&view=FitH&zoom=page-width';
+
+            function normalizeCvKey(value) {
+                if (!value) return '';
+                return String(value).trim().toLowerCase();
+            }
+
+            function readCvFromUrl() {
+                const url = new URL(window.location.href);
+                const fromQuery = normalizeCvKey(url.searchParams.get('cv'));
+                const fromHash = normalizeCvKey((window.location.hash || '').replace(/^#/, ''));
+                return fromQuery || fromHash;
+            }
+
+            function resolveCvKey(candidate) {
+                const key = normalizeCvKey(candidate);
+                return cvFiles[key] ? key : 'data-scientist';
+            }
+
+            function setActiveCv(cvKey, updateUrl) {
+                const key = resolveCvKey(cvKey);
+                const file = cvFiles[key];
+
+                if (iframe) {
+                    iframe.src = file + pdfViewerParams;
+                }
+
+                if (downloadLink) {
+                    downloadLink.href = file;
+                    downloadLink.setAttribute('download', 'ArashCV - ' + (cvLabels[key] || 'Resume') + '.pdf');
+                }
+
+                buttons.forEach(btn => {
+                    const isActive = btn.dataset.cv === key;
+                    btn.classList.toggle('active', isActive);
+                    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+
+                if (updateUrl) {
+                    const url = new URL(window.location.href);
+                    url.searchParams.set('cv', key);
+                    url.hash = key;
+                    window.history.replaceState({}, '', url.toString());
+                }
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    setActiveCv(btn.dataset.cv, true);
+                });
+            });
+
+            setActiveCv(readCvFromUrl(), true);
+        })();
+
         // Add smooth scrolling to all links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
