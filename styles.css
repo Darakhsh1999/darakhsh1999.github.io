@@ -682,6 +682,16 @@ a:hover {
     color: #666;
     line-height: 1.6;
     margin: 0;
+    text-align: inherit;
+}
+
+/* Align text toward the timeline center */
+.timeline-item:nth-child(even) .timeline-card {
+    text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-card {
+    text-align: left;
 }
 
 /* Timeline Connector Lines */
